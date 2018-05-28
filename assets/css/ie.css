@@ -1,0 +1,24 @@
+.locator .section {
+	display: block;
+	overflow: hidden;
+}
+.locator .places-map {
+	display: none;
+}
+.locator .places-map.visible{
+	display: block;
+}
+.locator .area {
+	float: left;
+}
+.locator .col{
+	float: right;
+}
+.locator #places .box {
+	display:table;
+	width: 100%;
+}
+.locator #places .box a{
+	display: table-cell;
+	vertical-align: middle;
+}
