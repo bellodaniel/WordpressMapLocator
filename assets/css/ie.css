@@ -22,3 +22,18 @@
 	display: table-cell;
 	vertical-align: middle;
 }
+.gm-style-pbc + div > div > div > * {
+	max-width: 350px;
+}
+.gm-style-iw p {
+	max-width: 300px;
+}
+@media screen and (max-width: 650px) {
+	.locator .area {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	.locator .col {
+		width: 100%;
+	}
+}
