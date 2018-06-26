@@ -68,4 +68,4 @@ add_shortcode('map_locator', 'map_physican_locator');
 ?>
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj8FiIpntED5oxbdR0Nct72m2ys-i6qRE&libraries=places"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn-hQ4NOvDeNr2GGF7pBN_I14JpRmUBV4&libraries=places"></script>

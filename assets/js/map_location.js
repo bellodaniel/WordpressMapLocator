@@ -1,7 +1,7 @@
-$( document ).ready(function(){
+jQuery( document ).ready(function(){
 
     var exogenus_geolocator = {
-        "api_key": "AIzaSyCj8FiIpntED5oxbdR0Nct72m2ys-i6qRE",
+        "api_key": "AIzaSyAn-hQ4NOvDeNr2GGF7pBN_I14JpRmUBV4",
         "keywords": "Orthopedic, Podiatrist, Sports Medicine"
     };
     var map = document.getElementById('map'),

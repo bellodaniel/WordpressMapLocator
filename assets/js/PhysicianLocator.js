@@ -141,7 +141,7 @@
       },
 
       clearOutput: function (element) {
-        $(element).text('');
+        jQuery(element).text('');
       },
 
       getLink: function(info){
@@ -152,12 +152,12 @@
         var self = this;
         data.forEach(function(item) {
           var handleLink;
-          $(element).append(self.getLink({
+          jQuery(element).append(self.getLink({
             place_id: item.place_id,
             name: item.name,
             vicinity: item.vicinity
           }));
-          console.log($(element).html());
+          console.log(jQuery(element).html());
           self.items.forEach(function(obj) {
             if(obj.place_id === item.place_id){
               // self.addInfo(obj.item, obj.marker);
@@ -167,8 +167,8 @@
             }
           });
 
-          $('#' + item.place_id).on('click', function () {
-            var $box = $(this).parent(self.opts.outputItem);
+          jQuery('#' + item.place_id).on('click', function () {
+            var $box = jQuery(this).parent(self.opts.outputItem);
             $box.addClass(self.opts.activeClass).siblings().removeClass(self.opts.activeClass);
             // open marker
             handleLink();
@@ -278,9 +278,9 @@
         var self = this;
         obj.marker.addListener('click', function () {
           self.getDetails(obj);
-          var $box = $('#' + obj.place_id).parent(self.opts.outputItem);
+          var $box = jQuery('#' + obj.place_id).parent(self.opts.outputItem);
           if ($box.length) {
-            $(self.opts.output).find('.' + self.opts.activeClass).removeClass(self.opts.activeClass);
+            jQuery(self.opts.output).find('.' + self.opts.activeClass).removeClass(self.opts.activeClass);
             $box.addClass(self.opts.activeClass);
             self.updateBoxPosition($box);
           }
@@ -293,8 +293,8 @@
           return false;
         }
 
-        $(this.opts.output).scrollTop(0);
-        $(this.opts.output).scrollTop($el.position().top);
+        jQuery(this.opts.output).scrollTop(0);
+        jQuery(this.opts.output).scrollTop($el.position().top);
       },
 
       setSearchBox: function(){
@@ -320,7 +320,7 @@
             return;
           }
 
-          $(self.opts.error).hide();
+          jQuery(self.opts.error).hide();
           self.clearOutput(self.opts.output);
           self.removeItems();
 
@@ -372,14 +372,14 @@
 
       showContainer: function () {
         var center = this.gMap.getCenter();
-        $(this.opts.container).addClass('visible');
+        jQuery(this.opts.container).addClass('visible');
         google.maps.event.trigger(this.gMap, 'resize');
         this.gMap.setCenter(center);
         this.visible = true;
       },
 
       showError: function() {
-        $(this.opts.error).text(this.opts.errorMessage).show();
+        jQuery(this.opts.error).text(this.opts.errorMessage).show();
       },
 
       setIcon: function(marker, place) {
